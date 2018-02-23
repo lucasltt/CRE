@@ -1,4 +1,5 @@
 
+/*
 create table REF_FORM_FTYPE
 (
 TIPO VARCHAR2(200)
@@ -40,3 +41,4 @@ commit;
 
 
 EXEC gc_compileinvalidobjects;
+*/

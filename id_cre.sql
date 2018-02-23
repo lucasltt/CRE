@@ -69,5 +69,52 @@ SELECT "G3E_IDENTIFIER",
 
 create table ref_id_cre
 (
-id_projeto_cre varchar2(80)
+    id_projeto_cre varchar2(80)
 );
+
+
+create or replace public synonym ref_id_cre for ref_id_cre;
+grant select on ref_id_cre to everyone;
+grant insert, delete, update on ref_id_cre to administrator;
+
+
+create table cre_config
+(
+    chave varchar2(50),
+    valor varchar2(100),
+    desp  varchar2(300)
+);
+
+create or replace public synonym cre_config for cre_config;
+grant select on cre_config to everyone;
+grant insert, delete, update on cre_config to administrator;
+
+
+insert into cre_config values('PastaRecebimento', 'D:\Geoplex\cre_recebiemnto', 'Pasta onde está localizado os arquivo CSVs com ID do CRE');
+insert into cre_config values('PastaEnvio', 'D:\Geoplex\cre_envio', 'Pasta onde exporta o CSV');
+insert into cre_config values('UltimoArquivo', null, 'Pasta onde exporta o CSV');
+insert into cre_config values('UltimaAtualizacao', null, 'Ultimo horario que o ID foi atualizado');
+insert into cre_config values('Intervalo', '30', 'Intervalo para atualização dos ID do CRE');
+commit;
+
+
+
+create or replace view cre_delta_t as
+select (extract(minute from
+               numtodsinterval((sysdate -
+                               to_date(valor, 'dd/mm/yyyy hh24:mi:ss')),
+                               'day')) +
+       extract(hour from
+               numtodsinterval((sysdate -
+                               to_date(valor, 'dd/mm/yyyy hh24:mi:ss')),
+                               'day')) * 60 +
+       extract(day from
+               numtodsinterval((sysdate -
+                               to_date(valor, 'dd/mm/yyyy hh24:mi:ss')),
+                               'day')) * 60 * 24) delta_t
+
+  from cre_config
+ where chave = 'UltimaAtualizacao';
+
+create or replace public synonym cre_delta_t for cre_delta_t;
+grant select on cre_delta_t to everyone;

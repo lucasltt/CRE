@@ -1,4 +1,5 @@
 
+/*
 ALTER TABLE B$GC_SPLICE ADD FEATURE_TYPE VARCHAR2(200);
 
 -- Este bloco abaixo recria views, triggers e outros objetos atrelado à tabela
@@ -66,3 +67,4 @@ commit;
 
 
 EXEC gc_compileinvalidobjects;
+*/

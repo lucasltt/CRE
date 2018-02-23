@@ -18,7 +18,7 @@ insert into g3e_customcommand
    G3E_EDITDATE,
    G3E_INTERFACE)
 values
-  (g3e_customcommand_seq.net,
+  (g3e_customcommand_seq.nextval,
    null,
    'Intergração CRE',
    'Integração CRE',

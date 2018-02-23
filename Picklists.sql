@@ -1,14 +1,3 @@
-create table REF_METODO_IR
-(
-  g3e_fno NUMBER(5),
-  metodo  VARCHAR2(200)
-);
-
-create or replace public synonym REF_METODO_IR for REF_METODO_IR;
-grant select on REF_METODO_IR to everyone;
-grant inserte, delete, update on REF_METODO_IR to administrator;
-
-
 insert into ref_metodo_ir values(10300,'Instalação de armário metálico');
 insert into ref_metodo_ir values(10300,'Instalação de armário óptico');
 insert into ref_metodo_ir values(10300,'Retirada de armário metálico');
@@ -90,3 +79,44 @@ insert into ref_metodo_ir values(10900,'Retirada de caixa terminal');
 insert into ref_metodo_ir values(19300,'Instalação de transdutor');
 insert into ref_metodo_ir values(19300,'Retirada de transdutor');
 commit;
+
+
+insert into REF_FTYPE_CRE values(2600, 'CORDOALHA RD EXT ACO BENZINAL 4,55MM 3F');
+insert into REF_FTYPE_CRE values(2900, 'Armário Metálico');
+insert into REF_FTYPE_CRE values(2900, 'Armário Óptico');
+insert into REF_FTYPE_CRE values(11900, 'DISTRIBUIDOR GERAL OPT 19 36FBRS');
+insert into REF_FTYPE_CRE values(11900, 'DISTRIBUIDOR OPTICO GERAL 19 12 FIBRAS');
+insert into REF_FTYPE_CRE values(2400, 'TDUTO CORRUGADO PEAD DIAM 124 MM');
+insert into REF_FTYPE_CRE values(2400, 'DUTO LISO PVC DIAM 100 X 6000 MM C/PB');
+insert into REF_FTYPE_CRE values(2400, 'DUTO RD CORRUG P/FORA LISO P/DENT PEAD');
+insert into REF_FTYPE_CRE values(2400, 'DUTO LISO ACO GALVAN DIAM 114 X 6000 MM');
+insert into REF_FTYPE_CRE values(2400, 'NA');
+insert into REF_FTYPE_CRE values(10800, 'CEM AÉREA N/SELADA 200PRS');
+insert into REF_FTYPE_CRE values(10800, 'CEM AÉREA N/SELADA 400PRS');
+insert into REF_FTYPE_CRE values(10800, 'CONJUNTO E. AÉREA ATÉ 100 PRS');
+insert into REF_FTYPE_CRE values(10900, 'BASTIDOR ACO 10 PARES 1 BLOCO');
+insert into REF_FTYPE_CRE values(10900, 'BASTIDOR ACO 20 PARES 2 BLOCOS');
+insert into REF_FTYPE_CRE values(10900, 'BASTIDOR ACO 30 PARES 3 BLOCOS');
+insert into REF_FTYPE_CRE values(10900, 'BASTIDOR ACO 50 PARES 5 BLOCOs');
+insert into REF_FTYPE_CRE values(10900, 'Bastidor De Aco 100 Pares (10 Blocos)');
+insert into REF_FTYPE_CRE values(10900, 'TERMINAL ACESSO REDE 10 PR TAR-10-3E.RAP');
+insert into REF_FTYPE_CRE values(10900, 'TERMINAL ACESSO REDE 20 PR TAR-20-3E.RAP');
+insert into REF_FTYPE_CRE values(10900, 'TERMINAL ACESSO REDE 10 PR TAR-10-3E.RAP');
+insert into REF_FTYPE_CRE values(10900, 'TERMINAL ACESSO REDE 20 PR TAR-20-3E.RAP');
+insert into REF_FTYPE_CRE values(19600, 'DISTRIBUIDOR GERAL OPT 19 24FBRS');
+insert into REF_FTYPE_CRE values(19600, 'DISTRIBUIDOR GERAL OPT 19 36FBRS');
+insert into REF_FTYPE_CRE values(19600, 'DISTRIBUIDOR OPTICO GERAL 19 12 FIBRAS');
+insert into REF_FTYPE_CRE values(19600, 'SUB-BASTIDOR STOH 72 FIBRAS');
+insert into REF_FTYPE_CRE values(11800, 'CEO AÉREA 18-36 FBRS FIX. POSTE');
+insert into REF_FTYPE_CRE values(11800, 'CEO AÉREA 72 FBRS FIX. POSTE');
+insert into REF_FTYPE_CRE values(11800, 'CEO AÉREA ATÉ 12 FBRS FIX. POSTE');
+insert into REF_FTYPE_CRE values(11800, 'CEO SUBT 144 FBRS');
+insert into REF_FTYPE_CRE values(11800, 'CEO SUBT 18-36 FBRS');
+insert into REF_FTYPE_CRE values(11800, 'CEO SUBT 48-72 FBRS');
+insert into REF_FTYPE_CRE values(11800, 'CEO SUBT ATÉ 12FBRS');
+insert into REF_FTYPE_CRE values(19300, 'TRANSDUTOR PRESSAO CABO ENDERECADO INT');
+commit;
+--falta
+--scripts vba
+--script criação componente texto
+--testar na nossa maquina

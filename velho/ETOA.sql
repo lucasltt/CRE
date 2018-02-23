@@ -1,4 +1,6 @@
 
+/*
+
 ALTER TABLE B$GC_FTERM ADD FEATURE_TYPE VARCHAR2(200);
 
 
@@ -62,5 +64,5 @@ values (1190326, 1190119, 26, 11901, 1, null, 0, 1190103, null, null, sysdate, 0
 commit;
 
 
-
 EXEC gc_compileinvalidobjects;
+*/

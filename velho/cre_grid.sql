@@ -8,4 +8,4 @@ create table CRE_GRID
 );
 
 create or replace public synonym CRE_GRID for CRE_GRID;
-grant insert, select, delete on cre_grid to everyone;
+grant insert, select, delete, update on cre_grid to everyone;

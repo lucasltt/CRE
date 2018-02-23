@@ -1,5 +1,5 @@
 
-
+/*
 create table REF_BASE_FEATURETYPE
 (
 TIPO VARCHAR2(200)
@@ -37,3 +37,4 @@ commit;
 
 
 EXEC gc_compileinvalidobjects;
+*/

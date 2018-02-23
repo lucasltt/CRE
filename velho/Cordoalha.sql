@@ -1,5 +1,6 @@
 
 
+/*
 create table REF_CORD_FEATURETYPE
 (
 TIPO VARCHAR2(200)
@@ -22,3 +23,4 @@ commit;
 
 
 EXEC gc_compileinvalidobjects;
+*/
